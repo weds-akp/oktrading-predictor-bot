@@ -65,11 +65,11 @@ if records:
 
 colours = []
 
-    for record in records:
-        if record.get("recordGreen"):
-            colours.append("GREEN")
-        elif record.get("recordRed"):
-            colours.append("RED")
+for record in records:
+    if record.get("recordGreen"):
+        colours.append("GREEN")
+    elif record.get("recordRed"):
+        colours.append("RED")
 
     return colours
 
