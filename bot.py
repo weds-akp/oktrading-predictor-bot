@@ -60,16 +60,16 @@ def get_history():
 
     records = result.get("data", {}).get("records", [])
 
-if records:
-    print("RECORD FIELDS:", list(records[0].keys()))
+    if records:
+        print("RECORD FIELDS:", list(records[0].keys()))
 
-colours = []
+    colours = []
 
-for record in records:
-    if record.get("recordGreen"):
-        colours.append("GREEN")
-    elif record.get("recordRed"):
-        colours.append("RED")
+    for record in records:
+        if record.get("recordGreen"):
+            colours.append("GREEN")
+        elif record.get("recordRed"):
+            colours.append("RED")
 
     return colours
 
@@ -116,7 +116,7 @@ def main():
         except Exception as error:
             print("Request issue:", error)
 
-        print("\nChecking again in 60 seconds...")
+        print("\nChecking again in 5 seconds...")
         time.sleep(5)
 
 
