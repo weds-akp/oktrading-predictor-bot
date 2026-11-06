@@ -117,7 +117,7 @@ def main():
             print("Request issue:", error)
 
         print("\nChecking again in 60 seconds...")
-        time.sleep(60)
+        time.sleep(5)
 
 
 if __name__ == "__main__":
