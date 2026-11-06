@@ -59,7 +59,11 @@ def get_history():
         result = response.json()
 
     records = result.get("data", {}).get("records", [])
-    colours = []
+
+if records:
+    print("RECORD FIELDS:", list(records[0].keys()))
+
+colours = []
 
     for record in records:
         if record.get("recordGreen"):
